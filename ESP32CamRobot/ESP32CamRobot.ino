@@ -172,7 +172,7 @@ void setup(void) {
   pinMode(PIN_LED, OUTPUT);
 }
 
-void servoWrite(uint8_t channel, uint8_t value) {
+void servoWrite(uint8_t channel, uint8_t angle) {
   // regarding the datasheet of sg90 servo, pwm period is 20 ms and duty is 1->2ms
   uint32_t maxDuty = (pow(2,SERVO_RESOLUTION)-1)/10; 
   uint32_t minDuty = (pow(2,SERVO_RESOLUTION)-1)/20; 
